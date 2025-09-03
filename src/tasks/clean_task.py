@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 from prefect import task, get_run_logger
-from io.files import BRONZE, SILVER, read_csv, write_parquet
+from dataio.files import BRONZE, SILVER, read_csv, write_parquet
 from etl.clean import clean_crimes_df
 
 @task(name="Clean CSV → Parquet (silver)")
