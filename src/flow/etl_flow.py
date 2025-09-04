@@ -1,6 +1,6 @@
 from prefect import flow
-from tasks.clean_task import clean_task
-from tasks.load_task import load_task
+from src.tasks.clean_task import clean_task
+from src.tasks.load_task import load_task
 
 @flow(name="ETL clean → parquet → Postgres")
 def etl_clean_flow(csv_file: str,
