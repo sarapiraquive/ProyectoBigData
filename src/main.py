@@ -7,7 +7,7 @@ SRC = os.path.join(HERE, "src")
 if SRC not in sys.path:
     sys.path.insert(0, SRC)
 
-from flow.etl_flow import etl_clean_flow  # importa tu flow
+from src.flow.etl_flow import etl_clean_flow  # importa tu flow
 
 if __name__ == "__main__":
     # nombre del CSV que está en data/bronze/

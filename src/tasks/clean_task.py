@@ -1,8 +1,8 @@
 from pathlib import Path
 import pandas as pd
 from prefect import task, get_run_logger
-from dataio.files import BRONZE, SILVER, read_csv, write_parquet
-from etl.clean import clean_crimes_df
+from src.dataio.files import BRONZE, SILVER, read_csv, write_parquet
+from src.etl.clean import clean_crimes_df
 
 @task(name="Clean CSV → Parquet (silver)")
 def clean_task(csv_file: str, out_name: str = "raw_crimes_clean.parquet") -> str:

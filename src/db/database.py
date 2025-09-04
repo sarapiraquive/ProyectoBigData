@@ -1,10 +1,10 @@
 # src/db/database.py
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
-from config.settings import settings
+from src.config.settings import settings
 
 
-def get_engine(echo: bool = False) -> Engine:
+def get_engine(echo: bool = False) -> Engine:   
     """
     Crea el Engine de SQLAlchemy usando la URL de settings.db_url.
     Ejemplos de URL:
